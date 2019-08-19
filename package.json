@@ -4,7 +4,7 @@
   "description": "## Project setup ``` yarn install ```",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/_mocha --require babel-polyfill --require babel-register ./test/**/*.test.js"
   },
   "keywords": [
     "ddd"
@@ -14,5 +14,12 @@
   "dependencies": {
     "axios": "^0.19.0",
     "localforage": "^1.7.3"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
   }
 }
