@@ -1,4 +1,4 @@
-# plugins-3d
+# inig-3d
 
 ## Project setup
 ```

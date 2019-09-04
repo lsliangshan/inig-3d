@@ -1,6 +1,6 @@
 {
-  "name": "plugins-3d",
-  "version": "0.0.1",
+  "name": "inig-3d",
+  "version": "0.0.2",
   "description": "## Project setup ``` yarn install ```",
   "main": "index.js",
   "scripts": {
