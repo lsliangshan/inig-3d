@@ -1,3 +1,4 @@
+import { INIG } from '../../index'
 const Job = require('../../lib/domains/job/service')
 const chai = require('chai')
 const expect = chai.expect
@@ -12,14 +13,22 @@ const DEFAULT_CONFIG = {
   resumeNumber: 'JM809213719R90250000000',
   platform: '13',
   userId: '705788774',
-  at: '2e80b0e4dbad4b55abd5fea6f7349d58',
-  rt: 'c8d08a37e2b34df196980126c1178989'
+  at: '22574ad9088f4441bdee6ddaf215a1f7',
+  rt: '52c16fd691ae4d98ad405526a733dc71'
 }
-
+INIG({
+  options: {
+    platform: 13, // 必填
+    pagecode: 4020, // 必填
+    appid: 'A23'
+  },
+  isServer: false,
+  isTest: true
+})
 const baseData = {
-  platform: 13,   // 必填
-  pagecode: 4020, // 必填
-  appid: 'A23'
+  // platform: 13,   // 必填
+  // pagecode: 4020, // 必填
+  // appid: 'A23'
 }
 
 /**
