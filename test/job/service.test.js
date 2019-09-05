@@ -60,7 +60,7 @@ describe('【职位领域】推荐职位 - requestRecommendJobs', function () {
       at: DEFAULT_CONFIG.at,
       rt: DEFAULT_CONFIG.rt
     })).then(res => {
-      expect(res.data.list[0]).to.have.all.keys(recommendJobKeys)
+      expect(Object.keys(res.data.list[0])).to.include.members(recommendJobKeys)
     }).catch(err => {
       assert(false)
     })
@@ -91,7 +91,7 @@ describe('【职位领域】获取职位详情 - requestJobDetail', function () 
       at: DEFAULT_CONFIG.at,
       rt: DEFAULT_CONFIG.rt
     })).then(res => {
-      expect(res.data).to.have.all.keys(jobDetailKeys)
+      expect(Object.keys(res.data)).to.include.members(jobDetailKeys)
     }).catch(err => {
       assert(false)
     })
@@ -117,7 +117,7 @@ describe('【职位领域】获取相似职位 - requestSimilarJobs', function (
       at: DEFAULT_CONFIG.at,
       rt: DEFAULT_CONFIG.rt
     })).then(res => {
-      expect(res.data).to.have.all.keys(similarJobsKeys)
+      expect(Object.keys(res.data)).to.include.members(similarJobsKeys)
     }).catch(err => {
       assert(false)
     })
@@ -144,7 +144,7 @@ describe('【职位领域】获取在招职位 - requestAreaJobs', function () {
       at: DEFAULT_CONFIG.at,
       rt: DEFAULT_CONFIG.rt
     })).then(res => {
-      expect(res.data).to.have.all.keys(areaJobsKeys)
+      expect(Object.keys(res.data)).to.include.members(areaJobsKeys)
     }).catch(err => {
       assert(false)
     })
@@ -169,7 +169,7 @@ describe('【职位领域】获取在招职位所在城市 - requestRecommendJob
       at: DEFAULT_CONFIG.at,
       rt: DEFAULT_CONFIG.rt
     })).then(res => {
-      expect(res.data).to.have.all.keys(areaJobCityKeys)
+      expect(Object.keys(res.data)).to.include.members(areaJobCityKeys)
     }).catch(err => {
       assert(false)
     })
@@ -276,7 +276,7 @@ describe('【职位领域】投递职位 - requestJobDeliver', function () {
       at: DEFAULT_CONFIG.at,
       rt: DEFAULT_CONFIG.rt
     })).then(res => {
-      expect(res.data).to.have.all.keys(jobDeliverKeys)
+      expect(Object.keys(res.data)).to.include.members(jobDeliverKeys)
     }).catch(err => {
       assert(false)
     })
